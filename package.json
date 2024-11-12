@@ -1,13 +1,14 @@
 {
   "name": "myblog",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Sewen Blog",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "deploy": "sh deploy.sh",
-    "upload": "cd docs/.vuepress/dist && git push -f https://github.com/Sewar-x/myblog.git master:gh-pages"
+    "upload": "cd docs/.vuepress/dist && git push -f https://github.com/Sewar-x/myblog.git master:gh-pages",
+    "clean-dev": "vuepress dev src --clean-cache"
   },
   "repository": {
     "type": "git",
@@ -19,13 +20,34 @@
   "author": "Sewen",
   "license": "ISC",
   "devDependencies": {
-    "vuepress": "^1.8.2"
+    "@vue/repl": "^4.3.1",
+    "@vuepress/bundler-webpack": "2.0.0-rc.14",
+    "@vuepress/plugin-blog": "2.0.0-rc.40",
+    "@vuepress/plugin-copy-code": "2.0.0-rc.40",
+    "@vuepress/plugin-prismjs": "2.0.0-rc.40",
+    "@vuepress/plugin-search": "2.0.0-rc.40",
+    "@vuepress/plugin-shiki": "2.0.0-rc.40",
+    "chart.js": "^4.4.3",
+    "echarts": "^5.5.1",
+    "flowchart.ts": "^3.0.0",
+    "markmap-lib": "^0.16.1",
+    "markmap-toolbar": "^0.16.0",
+    "markmap-view": "^0.16.0",
+    "mermaid": "^10.9.1",
+    "reveal.js": "^5.1.0",
+    "sass-loader": "^14.2.1",
+    "vitepress-theme-website": "^1.0.8",
+    "vue": "^3.4.35",
+    "vuepress": "2.0.0-rc.14"
   },
   "directories": {
     "doc": "docs"
   },
   "dependencies": {
+    "@vuepress/helper": "2.0.0-rc.3",
+    "@vuepress/plugin-copyright": "2.0.0-rc.40",
     "markdown-it-disable-url-encode": "^1.0.1",
-    "vuepress-theme-hope": "^1.19.0"
+    "vitepress": "^1.3.1",
+    "vuepress-theme-hope": "2.0.0-rc.52"
   }
 }

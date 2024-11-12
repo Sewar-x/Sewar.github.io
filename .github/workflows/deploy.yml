@@ -36,7 +36,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4 # 使用GitHub提供的actions/setup-node动作来设置Node.js环境
         with:
-          node-version: 16 # 配置actions/setup-node动作，指定Node.js的版本为16
+          node-version: 20.10.0 # 配置actions/setup-node动作，指定Node.js的版本为16
           cache: pnpm # 启用pnpm的缓存
       - name: Setup Pages
         uses: actions/configure-pages@v4
